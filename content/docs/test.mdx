@@ -1,17 +1,666 @@
 ---
-title: Components
+title: Time Value of Money
 description: Components
 ---
 
-## Code Block
+## 1. Core Idea
 
-```js
-console.log('Hello World');
-```
+* **Time Value of Money (TVM):** A dollar today is worth more than a dollar tomorrow because it can earn interest.
 
-## Cards
+* **Two main operations:**
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+  * **Compounding** → Find Future Value (FV)
+  * **Discounting** → Find Present Value (PV)
+
+---
+
+## 2. Essential Formulas
+
+| Concept                     | Formula                                  |
+| --------------------------- | ---------------------------------------- |
+| Future Value (Lump Sum)     | $FV = PV(1+i)^n$                         |
+| Present Value (Lump Sum)    | $PV = \frac{FV}{(1+i)^n}$                |
+| FV of Ordinary Annuity      | $FV = PMT \times \frac{(1+i)^n-1}{i}$    |
+| PV of Ordinary Annuity      | $PV = PMT \times \frac{1-(1+i)^{-n}}{i}$ |
+| Annuity Due                 | Ordinary Annuity $\times (1+i)$          |
+| Perpetuity                  | $PV = \frac{PMT}{i}$                     |
+| Effective Annual Rate (EAR) | $EAR = \left(1+\frac{r}{m}\right)^m-1$   |
+| Continuous Compounding      | $FV = PV \times e^{rt}$                  |
+
+---
+
+## 3. Key Distinctions (Exam Favourites)
+
+| Term              | Meaning                                               |
+| ----------------- | ----------------------------------------------------- |
+| Simple Interest   | Interest only on principal. $I = P \times r \times t$ |
+| Compound Interest | Interest on principal + accumulated interest          |
+| Ordinary Annuity  | Payments occur at the **end** of each period          |
+| Annuity Due       | Payments occur at the **beginning** of each period    |
+| Nominal Rate      | Stated annual rate                                    |
+| Effective Rate    | Actual annual return after compounding                |
+
+---
+
+## 4. Quick Problem-Solving Steps
+
+1. Draw a timeline.
+2. Identify the cash flow pattern.
+3. Check whether it is an ordinary annuity or annuity due.
+4. Match periods correctly.
+5. Select the formula.
+6. Substitute values.
+7. Solve.
+
+---
+
+## 5. Must-Know Examples
+
+### Example 1: Future Value
+
+**Question**
+
+Invest $1000 at 6% compounded annually for 5 years.
+
+**Solution**
+
+$$
+FV = 1000(1.06)^5
+$$
+
+$$
+FV = 1000(1.3382)
+$$
+
+$$
+FV = 1338.23
+$$
+
+> **Final Answer: $1338.23**
+
+---
+
+### Example 2: Present Value
+
+**Question**
+
+How much should you invest today to get $5000 in 4 years at 7%?
+
+**Solution**
+
+$$
+PV = \frac{5000}{(1.07)^4}
+$$
+
+$$
+PV = \frac{5000}{1.3108}
+$$
+
+$$
+PV = 3814.46
+$$
+
+> **Final Answer: $3814.46**
+
+---
+
+### Example 3: Future Value of Ordinary Annuity
+
+**Question**
+
+Deposit $200 at the end of each year for 3 years at 5%.
+
+**Solution**
+
+$$
+FV = 200 \times \frac{(1.05)^3-1}{0.05}
+$$
+
+$$
+FV = 200 \times 3.1525
+$$
+
+$$
+FV = 630.50
+$$
+
+> **Final Answer: $630.50**
+
+---
+
+### Example 4: Present Value of Ordinary Annuity
+
+**Question**
+
+Receive $500 every year for 4 years at 6%.
+
+**Solution**
+
+$$
+PV = 500 \times \frac{1-(1.06)^{-4}}{0.06}
+$$
+
+$$
+PV = 500 \times 3.4651
+$$
+
+$$
+PV = 1732.55
+$$
+
+> **Final Answer: $1732.55**
+
+---
+
+### Example 5: Loan Payment
+
+**Question**
+
+Borrow $8000 at 5% for 3 years.
+
+**Solution**
+
+$$
+PMT = \frac{8000 \times 0.05}{1-(1.05)^{-3}}
+$$
+
+$$
+PMT = \frac{400}{0.1362}
+$$
+
+$$
+PMT = 2938.64
+$$
+
+> **Final Answer: $2938.64 per year**
+
+---
+
+### Example 6: Effective Annual Rate
+
+**Question**
+
+8% compounded quarterly. Find EAR.
+
+**Solution**
+
+$$
+EAR = \left(1+\frac{0.08}{4}\right)^4-1
+$$
+
+$$
+EAR = (1.02)^4-1
+$$
+
+$$
+EAR = 0.0824
+$$
+
+> **Final Answer: 8.24%**
+
+---
+
+## 6. Common Mistakes
+
+* ❌ Forgetting to divide the annual rate for monthly compounding.
+* ❌ Forgetting to multiply years by the number of compounding periods.
+* ❌ Confusing ordinary annuity with annuity due.
+* ❌ Using the perpetuity formula for finite cash flows.
+* ❌ Forgetting to discount deferred cash flows.
+
+---
+
+## 7. Formula Revision Sheet
+
+| Goal                   | Formula                             |
+| ---------------------- | ----------------------------------- |
+| FV of Lump Sum         | $FV = PV(1+i)^n$                    |
+| PV of Lump Sum         | $PV = \frac{FV}{(1+i)^n}$           |
+| FV of Annuity          | $PMT \times \frac{(1+i)^n-1}{i}$    |
+| PV of Annuity          | $PMT \times \frac{1-(1+i)^{-n}}{i}$ |
+| Annuity Due            | Ordinary Annuity $\times (1+i)$     |
+| Perpetuity             | $\frac{PMT}{i}$                     |
+| EAR                    | $\left(1+\frac{r}{m}\right)^m-1$    |
+| Continuous Compounding | $FV = PVe^{rt}$                     |
+
+---
+
+## 8. Memory Aid
+
+### PFAD
+
+* **P** → Present Value
+* **F** → Future Value
+* **A** → Ordinary Annuity
+* **D** → Annuity Due
+
+Remember:
+
+* Ordinary → End of period
+* Due → Beginning of period
+
+---
+
+## 9. Practice Questions
+
+1. $5000 at 8% for 10 years → Find FV.
+2. How much today to get $10000 in 3 years at 5%?
+3. Save $300 every year for 5 years at 4% → Find FV.
+4. Receive $1000 every year for 6 years at 7% → Find PV.
+5. Loan of $15000 at 6% for 4 years → Find annual payment.
+
+
+Absolutely. This is actually the **correct way to prepare Time Value of Money (TVM)** because university Engineering Economics exams rarely say:
+
+> "Find Future Value."
+
+Instead, they hide the information inside paragraphs and **you must identify:**
+
+1. Which data is given?
+2. Which formula to use?
+3. What type of cash flow it is?
+4. Whether it's PV, FV, PMT, EAR, ordinary annuity, etc.
+
+I'll make these **exam-level questions**.
+
+# Time Value of Money - Exam Level Questions (Solved)
+
+---
+
+# Question 1 (Medium)
+
+An engineer plans to purchase new software after 6 years. The software is expected to cost $25,000 at that time. If he can invest money today in an account earning 8% annually, how much money should he invest today to meet this goal?
+
+---
+
+## Step 1: Identify Data
+
+We need money **today**.
+
+Given:
+
+Future Value:
+
+$$
+FV=25000
+$$
+
+Interest Rate:
+
+$$
+i=8%=0.08
+$$
+
+Years:
+
+$$
+n=6
+$$
+
+Need:
+
+$$
+PV=?
+$$
+
+---
+
+## Step 2: Formula
+
+Present Value:
+
+$$
+PV=\frac{FV}{(1+i)^n}
+$$
+
+---
+
+## Step 3: Substitute
+
+$$
+PV=\frac{25000}{(1.08)^6}
+$$
+
+$$
+PV=\frac{25000}{1.5869}
+$$
+
+$$
+PV=15753.36
+$$
+
+### Final Answer
+
+The engineer should invest:
+
+> **$15,753.36 today**
+
+---
+
+# Question 2 (Medium)
+
+A manufacturing company deposits $3000 at the end of every year into a maintenance fund. The account earns 7% annual interest. Determine the amount accumulated after 8 years.
+
+---
+
+## Step 1: Identify
+
+Repeated yearly payments.
+
+This is an **Ordinary Annuity**.
+
+Given:
+
+$$
+PMT=3000
+$$
+
+$$
+i=0.07
+$$
+
+$$
+n=8
+$$
+
+Need:
+
+$$
+FV
+$$
+
+---
+
+## Formula
+
+$$
+FV=PMT\frac{(1+i)^n-1}{i}
+$$
+
+---
+
+## Solution
+
+$$
+FV=3000\frac{(1.07)^8-1}{0.07}
+$$
+
+$$
+FV=3000\frac{1.7182-1}{0.07}
+$$
+
+$$
+FV=3000(10.259)
+$$
+
+$$
+FV=30777
+$$
+
+### Final Answer
+
+> **$30,777**
+
+---
+
+# Question 3 (Hard)
+
+A student wants to create an education fund that will provide $5000 every year for 10 years starting one year from now. If the account earns 6% annually, how much money is required today?
+
+---
+
+## Identify
+
+Repeated future payments.
+
+We need money today.
+
+This is **Present Value of an Ordinary Annuity**.
+
+Given:
+
+$$
+PMT=5000
+$$
+
+$$
+i=0.06
+$$
+
+$$
+n=10
+$$
+
+Need:
+
+$$
+PV
+$$
+
+---
+
+## Formula
+
+$$
+PV=PMT\frac{1-(1+i)^{-n}}{i}
+$$
+
+---
+
+## Solution
+
+$$
+PV=5000\frac{1-(1.06)^{-10}}{0.06}
+$$
+
+$$
+PV=5000(7.3601)
+$$
+
+$$
+PV=36800.50
+$$
+
+### Final Answer
+
+> **$36,800.50**
+
+---
+
+# Question 4 (Hard)
+
+An engineer borrows $50,000 to purchase equipment. The loan carries a 9% annual interest rate and must be repaid in equal yearly installments over 5 years. Determine the annual payment.
+
+---
+
+## Identify
+
+Loan repayment.
+
+Need:
+
+$$
+PMT
+$$
+
+Given:
+
+$$
+PV=50000
+$$
+
+$$
+i=0.09
+$$
+
+$$
+n=5
+$$
+
+---
+
+## Formula
+
+$$
+PMT=\frac{PV\times i}{1-(1+i)^{-n}}
+$$
+
+---
+
+## Solution
+
+$$
+PMT=\frac{50000\times0.09}{1-(1.09)^{-5}}
+$$
+
+$$
+PMT=\frac{4500}{0.3504}
+$$
+
+$$
+PMT=12842.47
+$$
+
+### Final Answer
+
+> **$12,842.47 per year**
+
+---
+
+# Question 5 (Hard)
+
+A bank advertises an annual interest rate of 12% compounded monthly. Determine the effective annual rate.
+
+---
+
+## Identify
+
+Need:
+
+EAR
+
+Given:
+
+$$
+r=12%=0.12
+$$
+
+$$
+m=12
+$$
+
+---
+
+## Formula
+
+$$
+EAR=\left(1+\frac{r}{m}\right)^m-1
+$$
+
+---
+
+## Solution
+
+$$
+EAR=\left(1+\frac{0.12}{12}\right)^{12}-1
+$$
+
+$$
+EAR=(1.01)^{12}-1
+$$
+
+$$
+EAR=0.1268
+$$
+
+### Final Answer
+
+> **12.68%**
+
+---
+
+# Question 6 (Exam-Tricky)
+
+A machine will generate savings of $4000 every year for 6 years. The first saving occurs one year from today. If the minimum attractive rate of return is 10%, determine the present worth of these savings.
+
+---
+
+## Identify Keywords
+
+"Every year"
+
+"6 years"
+
+"First saving occurs one year from today"
+
+This means:
+
+✅ Ordinary annuity
+
+Need:
+
+$$
+PV
+$$
+
+Given:
+
+$$
+PMT=4000
+$$
+
+$$
+i=0.10
+$$
+
+$$
+n=6
+$$
+
+---
+
+## Formula
+
+$$
+PV=PMT\frac{1-(1+i)^{-n}}{i}
+$$
+
+---
+
+## Solution
+
+$$
+PV=4000\frac{1-(1.10)^{-6}}{0.10}
+$$
+
+$$
+PV=4000(4.3553)
+$$
+
+$$
+PV=17421.20
+$$
+
+### Final Answer
+
+> **$17,421.20**
+
+# Exam Keyword Decoder (SUPER IMPORTANT)
+
+| If question says       | Think            |
+| ---------------------- | ---------------- |
+| Invest today           | PV               |
+| Amount after years     | FV               |
+| Every year             | Annuity          |
+| Beginning of each year | Annuity Due      |
+| End of each year       | Ordinary Annuity |
+| Equal installments     | PMT              |
+| Actual annual return   | EAR              |
+| Forever                | Perpetuity       |
+| Money needed today     | PV               |
+| Future target amount   | FV               |
+
+# For full marks, train yourself like this:
+
+**Question → Detect Keywords → Extract Data → Select Formula → Solve**
+
