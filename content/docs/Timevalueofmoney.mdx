@@ -1,0 +1,153 @@
+---
+title: TVM(Part 2)
+description: Time Value of Money in more detail
+---
+
+# 1-Hour TVM Crash Course for Engineering Economics
+
+Professor here. We have 60 minutes. Let's cut the fluff and get you exam-ready.
+
+---
+
+## 1. Core Idea (2 mins)
+
+**Why is Rs.100 today > Rs.100 tomorrow?**
+
+1. **Interest Earning:** You can put Rs.100 in a bank today and earn interest (e.g., Rs.110 after 1 year).
+2. **Inflation:** Prices rise. Rs.100 buys fewer goods next year.
+3. **Opportunity Cost:** If you wait, you lose the chance to invest it elsewhere.
+
+**Golden Rule:** Money grows when you move **RIGHT** (Future). Money shrinks when you move **LEFT** (Present).
+
+---
+
+## 2. Must-Know Terms (5 mins)
+
+- **PV (Present Value):** Value *today*. *Trick:* "P" = now.
+- **FV (Future Value):** Value *later*. *Trick:* "F" = final.
+- **i (Interest Rate):** Rate per period (e.g., 10% = 0.10). *Trick:* Rate.
+- **n (Periods):** Number of years/compounding periods. *Trick:* Count.
+- **Compounding:** Earning "interest on interest" (moving right). *Trick:* Multiply by (1+i)^n.
+- **Discounting:** Finding today's value of future money (moving left). *Trick:* Divide by (1+i)^n.
+
+---
+
+## 3. Formula Cheat Sheet (10 mins)
+
+| Formula | When to Use | Symbols |
+| :--- | :--- | :--- |
+| **Future Value (Single)** <br/> $FV = PV(1+i)^n$ | Have PV, find FV. | PV=Today, FV=Later, i=rate, n=years. |
+| **Present Value (Single)** <br/> $PV = \\frac{FV}{(1+i)^n}$ | Have FV, find PV. | Reverse of above. |
+| **Simple Interest** <br/> $SI = P \\times r \\times t$ | Interest on principal only. | P=Principal, r=rate, t=time. |
+| **Compound Interest** <br/> $CI = FV - PV$ | Total interest earned. | Use FV formula first. |
+| **Uniform Series (F/A)** <br/> $F = A\\frac{(1+i)^n - 1}{i}$ | Have Annual payment (A), find Future (F). | A=Equal yearly cash flow. |
+| **Sinking Fund (A/F)** <br/> $A = F\\frac{i}{(1+i)^n - 1}$ | Have Future (F), find Annual payment (A). | Saving yearly for a target. |
+| **Present Worth (P/A)** <br/> $P = A\\frac{(1+i)^n - 1}{i(1+i)^n}$ | Have Annual (A), find Present (P). | Value of yearly incomes today. |
+| **Capital Recovery (A/P)** <br/> $A = P\\frac{i(1+i)^n}{(1+i)^n - 1}$ | Have Present (P), find Annual (A). | Loan EMI calculation. |
+
+---
+
+## 4. Exam Data Identification Trick (5 mins)
+
+When reading a long problem, **underline the keywords**:
+
+- "Invested **today**" → **PV**
+- "Received **after** 5 years" → **FV**
+- "Paid **every year / annually**" → **A**
+- "Rate is 12% **per annum**" → **i**
+- "Duration is 3 **years**" → **n**
+
+**Decision Tree:**
+- See **PV** and want **FV**? → Use $F = P(1+i)^n$
+- See **A** and want **FV**? → Use $F = A\\frac{(1+i)^n - 1}{i}$
+- See **FV** and want **A**? → Use $A = F\\frac{i}{(1+i)^n - 1}$
+- See **A** and want **PV**? → Use $P = A\\frac{(1+i)^n - 1}{i(1+i)^n}$
+- See **PV** and want **A**? → Use $A = P\\frac{i(1+i)^n}{(1+i)^n - 1}$
+
+---
+
+## 5. Solved Numericals (30 mins)
+
+### Q1. Easy (Simple Interest)
+**Problem:** Rs. 10,000 invested at 8% simple interest for 4 years. Find interest.
+
+- **Given:** P=10,000, r=0.08, t=4.
+- **Formula:** $SI = P \\times r \\times t$
+- **Sub:** $SI = 10000 \\times 0.08 \\times 4 = 800 \\times 4$
+- **Answer:** Rs. 3,200.
+
+---
+
+### Q2. Easy (Compound Interest - Single)
+**Problem:** Rs. 20,000 at 10% compounded annually for 3 years. Find FV.
+
+- **Given:** PV=20,000, i=0.10, n=3.
+- **Formula:** $FV = PV(1+i)^n$
+- **Sub:** $FV = 20000(1.10)^3 = 20000 \\times 1.331$
+- **Answer:** Rs. 26,620.
+
+---
+
+### Q3. Medium (Finding PV)
+**Problem:** You need Rs. 50,000 after 5 years. Bank gives 12%. How much to invest today?
+
+- **Given:** FV=50,000, i=0.12, n=5.
+- **Formula:** $PV = \\frac{FV}{(1+i)^n}$
+- **Sub:** $PV = \\frac{50000}{(1.12)^5} = \\frac{50000}{1.7623}$
+- **Answer:** Rs. 28,371.
+
+---
+
+### Q4. Medium (Uniform Series - P/A)
+**Problem:** A machine gives Rs. 20,000 yearly for 4 years. At 10%, find Present Value of these earnings.
+
+- **Given:** A=20,000, i=0.10, n=4.
+- **Formula:** $P = A\\frac{(1+i)^n - 1}{i(1+i)^n}$
+- **Sub:** $P = 20000 \\times \\frac{(1.1)^4 - 1}{0.1(1.1)^4} = 20000 \\times \\frac{1.4641 - 1}{0.14641}$
+- **Calc:** $P = 20000 \\times \\frac{0.4641}{0.14641} = 20000 \\times 3.1699$
+- **Answer:** Rs. 63,398.
+
+---
+
+### Q5. Exam-Level (Capital Recovery + Outstanding Balance)
+**Problem:** Loan of Rs. 1,00,000 at 15% for 5 years.
+**(a) Find yearly EMI. (b) Balance after 2 years.**
+
+- **Given:** P=1,00,000, i=0.15, n=5.
+
+**(a) Formula:** $A = P\\frac{i(1+i)^n}{(1+i)^n - 1}$
+- **Sub:** $A = 100000 \\times \\frac{0.15(1.15)^5}{(1.15)^5 - 1}$
+- $(1.15)^5 = 2.011$. Numerator = $0.15 \\times 2.011 = 0.3016$. Denominator = $2.011 - 1 = 1.011$.
+- $A = 100000 \\times \\frac{0.3016}{1.011} = 100000 \\times 0.2983$.
+- **Answer (a):** Rs. 29,830 per year.
+
+**(b)** Balance after 2 years = PV of remaining 3 years of EMIs.
+- **Given:** A=29,830, i=0.15, n=3.
+- **Formula:** $P = A\\frac{(1+i)^n - 1}{i(1+i)^n}$
+- **Sub:** $P = 29830 \\times \\frac{(1.15)^3 - 1}{0.15(1.15)^3} = 29830 \\times \\frac{1.5209 - 1}{0.15 \\times 1.5209} = 29830 \\times \\frac{0.5209}{0.2281} = 29830 \\times 2.283$.
+- **Answer (b):** Rs. 68,110.
+
+---
+
+## 6. Common Exam Mistakes (5 mins)
+
+1. **Percentage Error:** Forgetting to divide % by 100. (e.g., 12% = 0.12, not 12).
+2. **Time Mismatch:** If interest is yearly but time is months (e.g., 6 months = 0.5 years). Always match `i` and `n`.
+3. **Sign Confusion:** In NPV, initial cost is **negative** (-), inflows are positive (+).
+4. **Formula Confusion:** Mixing up (F/A) with (A/F). Remember: **First letter = What you FIND**, Second = What you HAVE.
+5. **Rounding Early:** Keep 4 decimal places during calculations, round only the final answer.
+
+---
+
+## 7. Final 30-Second Revision Sheet (Look at this before entering)
+
+| Formula | When to use | Keyword |
+| :--- | :--- | :--- |
+| $FV = PV(1+i)^n$ | Single amount to future | **Growth** |
+| $PV = FV/(1+i)^n$ | Future amount to today | **Discount** |
+| $F = A\\frac{(1+i)^n - 1}{i}$ | Yearly deposits to future | **Annuity to Future** |
+| $A = F\\frac{i}{(1+i)^n - 1}$ | Target to yearly saving | **Target to EMI** |
+| $P = A\\frac{(1+i)^n - 1}{i(1+i)^n}$ | Yearly income to today | **Annuity to Present** |
+| $A = P\\frac{i(1+i)^n}{(1+i)^n - 1}$ | Loan to yearly EMI | **Loan repayment** |
+
+**Final Tip:** Draw a timeline. Write PV/FV/A on it. The formula will become obvious. Good luck! 🎓

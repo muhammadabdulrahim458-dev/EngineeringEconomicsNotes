@@ -1,28 +1,40 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
-import './global.css';
-import { Inter } from 'next/font/google';
-import 'katex/dist/katex.css';
-import type { Metadata } from 'next';
+import { RootProvider } from "fumadocs-ui/provider/next";
+import "./global.css";
+import "katex/dist/katex.css";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import type { ReactNode } from "react";
 
-const inter = Inter({
-  subsets: ['latin'],
+// Configure the sans (body) font
+const sansFont = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+// Configure the mono (code block) font
+const monoFont = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
-
+  metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: 'My Docs',
-    template: '%s | My Docs',
+    default: "My Docs",
+    template: "%s | My Docs",
   },
-
-  description: 'My documentation website',
+  description: "My documentation website",
 };
 
-export default function Layout({ children }: LayoutProps<'/'>) {
+// Replaced LayoutProps with a generic layout type for safety, update if you use a specific Fumadocs type wrapper
+export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+    <html
+      lang="en"
+      className={`${sansFont.variable} ${monoFont.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="flex flex-col min-h-screen antialiased">
         <RootProvider>{children}</RootProvider>
       </body>
     </html>

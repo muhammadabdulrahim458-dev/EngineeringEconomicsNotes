@@ -1,0 +1,500 @@
+---
+title: Depreciation
+description: Comprehensive notes
+---
+
+## 1. Core Idea
+
+**Depreciation:** The systematic allocation of the cost of a tangible asset over its useful life. It represents the decline in value due to wear and tear, obsolescence, or age.
+
+**Key Concept:** Depreciation is a **non-cash expense** used for:
+- Tax deductions (reduces taxable income)
+- Matching expenses with revenues
+- Asset replacement planning
+
+---
+
+## 2. Essential Terminology
+
+| Term | Symbol | Meaning |
+|------|--------|---------|
+| First Cost (Initial Cost) | P or FC | Original purchase price + installation |
+| Salvage Value | SV | Estimated value at end of useful life |
+| Useful Life | n | Expected years of service |
+| Depreciable Amount | P - SV | Total amount to be depreciated |
+| **Book Value** | **BV** | **The current worth of the asset on the books. It is the original cost minus total accumulated depreciation up to that point.** |
+| Depreciation Rate | d | Percentage of value lost per period (only for DB method) |
+
+---
+
+## 3. Book Value - The Core Concept (Exam Focus)
+
+**Definition:** Book Value is the **un-depreciated cost** of an asset at any given time. It represents how much of the asset's cost has not yet been expensed.
+
+**General Rule (for all methods):**
+
+$$
+\text{Book Value} = \text{Original Cost} - \text{Accumulated Depreciation}
+$$
+
+> **Important:** Book Value is **never** less than the Salvage Value. Depreciation stops when BV = SV.
+
+---
+
+## 4. Essential Formulas (Your Syllabus Only)
+
+| Method | Depreciation Formula | Book Value Formula |
+|--------|---------------------|-------------------|
+| **Straight Line (SL)** | $D_t = \frac{P - SV}{n}$ <br/>(Same for every year) | $BV_t = P - t \times D$ <br/>(t = number of years elapsed) |
+| **Declining Balance (DB)** | $D_t = d \times BV_{t-1}$ <br/>(Depreciation is a fixed % of the *previous* book value) | $BV_t = P(1-d)^t$ <br/>OR <br/>$BV_t = BV_{t-1} - D_t$ |
+| **Sum-of-Years Digits (SYD)** | $D_t = \frac{n - t + 1}{SYD} \times (P - SV)$ <br/>(Fraction declines each year) | $BV_t = P - \sum_{k=1}^{t} D_k$ <br/>(Original cost minus total depreciation taken so far) |
+
+---
+
+## 5. Key Distinctions (Exam Favourites)
+
+| Term | Meaning |
+|------|---------|
+| **Straight Line** | Simplest, equal depreciation each year. Book value declines linearly. |
+| **Declining Balance** | Accelerated method. Higher depreciation in early years, lower later. Book value declines exponentially. |
+| **Sum-of-Years Digits** | Accelerated method. Depreciation is a decreasing fraction of the depreciable amount. Book value declines faster initially. |
+| **Accumulated Depreciation** | The total depreciation claimed from year 1 up to the current year. |
+| **Book Value** | Cost minus accumulated depreciation. |
+
+---
+
+## 6. Quick Problem-Solving Steps
+
+1. **Identify** the depreciation method asked.
+2. **Extract** data: P, SV, n.
+3. **For SL:** Calculate D once, then subtract for BV.
+4. **For DB:** Calculate the rate (d) first if not given.
+5. **For SYD:** Calculate SYD and fractions.
+6. **Find Depreciation** for the required year(s).
+7. **Find Accumulated Depreciation** up to that year.
+8. **Apply** $BV = P - \text{Accumulated Depreciation}$.
+
+---
+
+## 7. Must-Know Examples (Focused on Book Value)
+
+---
+
+### Example 1: Straight Line (SL) - Finding Book Value
+
+**Question**
+
+A machine costs $50,000 with a salvage value of $5,000 and a useful life of 10 years.
+
+**Required:**
+a) Annual depreciation
+b) Book value after 4 years
+c) Book value after 10 years
+
+---
+
+**Solution**
+
+**Step 1:** Annual depreciation
+
+$$
+D = \frac{P - SV}{n} = \frac{50,000 - 5,000}{10} = \frac{45,000}{10} = 4,500
+$$
+
+**Step 2:** Book value after 4 years
+
+$$
+BV_4 = P - t \times D
+$$
+
+$$
+BV_4 = 50,000 - 4(4,500) = 50,000 - 18,000 = 32,000
+$$
+
+**Step 3:** Book value after 10 years
+
+$$
+BV_{10} = 50,000 - 10(4,500) = 50,000 - 45,000 = 5,000
+$$
+
+> Notice: BV at the end of life equals the Salvage Value ($5,000).
+
+**Final Answer:**
+> Annual Depreciation = **$4,500**
+> BV after 4 years = **$32,000**
+> BV after 10 years = **$5,000**
+
+---
+
+### Example 2: Declining Balance (DB) - Finding Book Value
+
+**Question**
+
+An asset costs $100,000 with a salvage value of $20,000 after 5 years. Using the Declining Balance method:
+
+**Required:**
+a) Find the depreciation rate (d)
+b) Calculate depreciation and Book Value for each year (Year 1 to 5)
+
+---
+
+**Solution**
+
+**Step 1:** Find depreciation rate
+
+$$
+d = 1 - \sqrt[n]{\frac{SV}{P}}
+$$
+
+$$
+d = 1 - \sqrt[5]{\frac{20,000}{100,000}} = 1 - \sqrt[5]{0.2}
+$$
+
+$$
+d = 1 - 0.7248 = 0.2752 \text{ or } 27.52\%
+$$
+
+**Step 2:** Calculate year-by-year depreciation and Book Value
+
+| Year (t) | BV at Start | Depreciation (D_t = d × BV_start) | BV at End (BV_t = BV_start - D_t) |
+|----------|-------------|-----------------------------------|-----------------------------------|
+| 0        | -           | -                                 | **100,000** (Initial Cost)        |
+| 1        | 100,000     | 0.2752 × 100,000 = 27,520         | **72,480**                        |
+| 2        | 72,480      | 0.2752 × 72,480 = 19,945          | **52,535**                        |
+| 3        | 52,535      | 0.2752 × 52,535 = 14,457          | **38,078**                        |
+| 4        | 38,078      | 0.2752 × 38,078 = 10,477          | **27,601**                        |
+| 5        | 27,601      | 0.2752 × 27,601 = 7,596           | **20,005** (≈ SV)                 |
+
+**Checking BV formula directly for Year 3:**
+
+$$
+BV_3 = P(1-d)^3 = 100,000(1-0.2752)^3 = 100,000(0.7248)^3 = 100,000(0.3808) = 38,080
+$$
+
+> Slight rounding difference, but it matches.
+
+**Final Answer:**
+> Depreciation Rate = **27.52%**
+> BV after 5 years ≈ **$20,000** (equals SV)
+
+---
+
+### Example 3: Declining Balance (DB) - Finding Book Value at a Specific Year
+
+**Question**
+
+An asset costs $60,000 with a salvage value of $10,000 after 6 years. Using DB method, find the Book Value after 3 years.
+
+---
+
+**Solution**
+
+**Step 1:** Find rate
+
+$$
+d = 1 - \sqrt[6]{\frac{10,000}{60,000}} = 1 - \sqrt[6]{0.1667}
+$$
+
+$$
+d = 1 - 0.742 = 0.258 \text{ or } 25.8\%
+$$
+
+**Step 2:** Apply BV formula directly
+
+$$
+BV_3 = P(1-d)^3
+$$
+
+$$
+BV_3 = 60,000(1-0.258)^3 = 60,000(0.742)^3
+$$
+
+$$
+BV_3 = 60,000(0.4085) = 24,510
+$$
+
+**Alternative step-by-step verification:**
+
+| Year | BV Start | Depreciation (25.8%) | BV End |
+|------|----------|----------------------|--------|
+| 1    | 60,000   | 15,480               | 44,520 |
+| 2    | 44,520   | 11,486               | 33,034 |
+| 3    | 33,034   | 8,523                | **24,511** |
+
+**Final Answer:**
+> Book Value after 3 years = **$24,510**
+
+---
+
+### Example 4: Sum-of-Years Digits (SYD) - Finding Book Value
+
+**Question**
+
+An asset costs $60,000 with salvage value $10,000 and useful life of 6 years. Using SYD method:
+
+**Required:**
+a) Find depreciation for year 2
+b) Find Book Value after 2 years
+c) Find Book Value after 5 years
+
+---
+
+**Solution**
+
+**Step 1:** Identify data
+
+$$
+P = 60,000, \quad SV = 10,000
+$$
+
+$$
+\text{Depreciable Amount} = 60,000 - 10,000 = 50,000
+$$
+
+$$
+n = 6
+$$
+
+**Step 2:** Sum of years
+
+$$
+SYD = \frac{n(n+1)}{2} = \frac{6(7)}{2} = 21
+$$
+
+**Step 3:** Calculate depreciation for each year (to find accumulated depreciation)
+
+| Year (t) | Fraction = (n-t+1)/SYD | Depreciation (Fraction × 50,000) |
+|----------|------------------------|----------------------------------|
+| 1        | 6/21                   | 14,285.71                        |
+| 2        | 5/21                   | 11,904.76                        |
+| 3        | 4/21                   | 9,523.81                         |
+| 4        | 3/21                   | 7,142.86                         |
+| 5        | 2/21                   | 4,761.90                         |
+| 6        | 1/21                   | 2,380.95                         |
+| **Total**| 21/21 = 1              | **50,000** (Matches depreciable amount) |
+
+**Step 4:** Book Value after 2 years
+
+Accumulated Depreciation for Year 1 + Year 2:
+
+$$
+Accumulated = 14,285.71 + 11,904.76 = 26,190.47
+$$
+
+$$
+BV_2 = P - Accumulated = 60,000 - 26,190.47 = 33,809.53
+$$
+
+**Step 5:** Book Value after 5 years
+
+Accumulated Depreciation for Year 1 to Year 5:
+
+$$
+Accumulated = 14,285.71 + 11,904.76 + 9,523.81 + 7,142.86 + 4,761.90 = 47,619.04
+$$
+
+$$
+BV_5 = 60,000 - 47,619.04 = 12,380.96
+$$
+
+**Check:** BV_6 would be 10,000 (SV), which makes sense.
+
+**Final Answer:**
+> Year 2 Depreciation = **$11,904.76**
+> BV after 2 years = **$33,809.53**
+> BV after 5 years = **$12,380.96**
+
+---
+
+### Example 5: Comparing All Three Methods (Book Value Focus)
+
+**Question**
+
+An asset costs $90,000 with salvage value $9,000 and life of 5 years.
+
+Calculate Book Value after **3 years** using:
+a) Straight Line
+b) Declining Balance
+c) Sum-of-Years Digits
+
+---
+
+**Solution**
+
+**Given:** P = 90,000, SV = 9,000, n = 5
+
+---
+
+**a) Straight Line**
+
+$$
+D = \frac{90,000 - 9,000}{5} = \frac{81,000}{5} = 16,200
+$$
+
+$$
+BV_3 = P - 3 \times D = 90,000 - 3(16,200) = 90,000 - 48,600 = 41,400
+$$
+
+---
+
+**b) Declining Balance**
+
+**Step 1:** Find rate
+
+$$
+d = 1 - \sqrt[5]{\frac{9,000}{90,000}} = 1 - \sqrt[5]{0.1}
+$$
+
+$$
+d = 1 - 0.63096 = 0.36904 \text{ or } 36.904\%
+$$
+
+**Step 2:** BV after 3 years
+
+$$
+BV_3 = P(1-d)^3 = 90,000(1-0.36904)^3
+$$
+
+$$
+BV_3 = 90,000(0.63096)^3 = 90,000(0.2512) = 22,608
+$$
+
+---
+
+**c) Sum-of-Years Digits**
+
+**Step 1:** SYD
+
+$$
+SYD = \frac{5(6)}{2} = 15
+$$
+
+**Step 2:** Depreciable amount = 90,000 - 9,000 = 81,000
+
+**Step 3:** Depreciation for first 3 years
+
+| Year | Fraction | Depreciation |
+|------|----------|--------------|
+| 1    | 5/15     | 27,000       |
+| 2    | 4/15     | 21,600       |
+| 3    | 3/15     | 16,200       |
+| **Total** | | **64,800** |
+
+**Step 4:** BV after 3 years
+
+$$
+BV_3 = 90,000 - 64,800 = 25,200
+$$
+
+---
+
+**Comparison Table (BV after 3 years)**
+
+| Method | Book Value after 3 years |
+|--------|--------------------------|
+| Straight Line | **$41,400** |
+| Declining Balance | **$22,608** |
+| SYD | **$25,200** |
+
+**Observation:** Accelerated methods (DB and SYD) result in lower book values after 3 years because more depreciation was taken earlier.
+
+---
+
+## 8. Common Mistakes (Exam Killers)
+
+| ❌ Mistake | ✅ Correct Approach |
+|-----------|-------------------|
+| Subtracting salvage value in DB formula | DB formula uses P directly: $BV_t = P(1-d)^t$ (SV only used to find d) |
+| Using (1/d) instead of (1-d) | $BV_t = P(1-d)^t$, not $P \times (1/d)^t$ |
+| Forgetting to accumulate depreciation for SYD | BV = P - Sum of *all* previous depreciation, not just the current year's |
+| Using the wrong fraction in SYD | Year 1 uses largest fraction: n/SYD, Year 2: (n-1)/SYD |
+| Book Value going below Salvage Value | If calculation gives BV < SV, set BV = SV (depreciation stops) |
+| Confusing Book Value with Market Value | Book Value = accounting value; Market Value = actual selling price |
+
+---
+
+## 9. Formula Revision Sheet (Your Syllabus Only)
+
+| Method | Depreciation Formula | Book Value Formula |
+|--------|---------------------|-------------------|
+| **Straight Line** | $D = \frac{P - SV}{n}$ | $BV_t = P - t \times D$ |
+| **Declining Balance** | $D_t = d \times BV_{t-1}$ <br/>where $d = 1 - \sqrt[n]{\frac{SV}{P}}$ | $BV_t = P(1-d)^t$ <br/>OR <br/>$BV_t = BV_{t-1} - D_t$ |
+| **Sum-of-Years Digits** | $D_t = \frac{n-t+1}{SYD} \times (P-SV)$ <br/>$SYD = \frac{n(n+1)}{2}$ | $BV_t = P - \sum_{k=1}^{t} D_k$ |
+
+---
+
+## 10. How to Find Book Value - Quick Reference
+
+**For SL:**
+1. Find Annual D.
+2. Multiply D by number of years (t).
+3. Subtract from P.
+
+**For DB:**
+1. Find rate d using the formula.
+2. Apply $BV_t = P(1-d)^t$ directly.
+3. Or calculate year-by-year if rates are tricky.
+
+**For SYD:**
+1. Calculate SYD.
+2. Calculate depreciation for EACH year up to year t.
+3. Sum them up (accumulated depreciation).
+4. Subtract from P.
+
+---
+
+## 11. Memory Aid (Syllabus Specific)
+
+### "S-D-S" for Methods
+- **S** → Straight Line
+- **D** → Declining Balance
+- **S** → Sum-of-Years Digits
+
+### Book Value Formula Reminder
+- **SL:** "Subtract equally each year" → $BV_t = P - tD$
+- **DB:** "Declining percentage" → $BV_t = P(1-d)^t$
+- **SYD:** "Sum the fractions" → $BV_t = P - \sum \text{Depreciation}$
+
+---
+
+## 12. Practice Questions (Exam Level - Syllabus Only)
+
+**Q1.** A machine costs $40,000 with salvage value $4,000 and life 8 years. Using Straight Line:
+- a) Find annual depreciation.
+- b) Find Book Value after 5 years.
+
+**Q2.** An asset costs $80,000 with salvage value $8,000 and useful life of 4 years. Using Declining Balance:
+- a) Find the depreciation rate.
+- b) Find Book Value after 2 years.
+- c) Find depreciation for year 3.
+
+**Q3.** A piece of equipment costs $120,000 with salvage value $20,000 and useful life of 7 years. Using Sum-of-Years Digits:
+- a) Find depreciation for year 4.
+- b) Find Book Value after 4 years.
+- c) Find Book Value after 7 years.
+
+**Q4.** An asset costs $50,000 with salvage value $5,000 and life of 10 years. Calculate the Book Value after 6 years using:
+- a) Straight Line
+- b) Declining Balance
+- c) Sum-of-Years Digits
+
+**Q5.** (Tricky) A machine costs $75,000 with salvage value $15,000 and life of 6 years. Using Declining Balance method, the Book Value at the end of year 3 is $30,000. Verify if this is correct. If not, find the correct BV.
+
+---
+
+## 13. Answers (Check Your Work)
+
+| Q | Answer |
+|---|--------|
+| Q1(a) | D = $4,500 |
+| Q1(b) | BV_5 = $17,500 |
+| Q2(a) | d = 43.7% |
+| Q2(b) | BV_2 = $25,411 |
+| Q2(c) | D_3 = $11,109 |
+| Q3(a) | D_4 = $10,204.08 |
+| Q3(b) | BV_4 = $54,285.72 |
+| Q3(c) | BV_7 = $20,000 (SV) |
+| Q4(a) | BV_6 = $23,000 |
+| Q4(b) | BV_6 = $18,895 (approx) |
+| Q4(c) | BV_6 = $12,045 (approx) |
+| Q5 | Rate d = 1 - (15k/75k)^(1/6) = 1 - 0.2^(1/6) = 1 - 0.765 = 23.5%. BV_3 = 75k(1-0.235)^3 = 75k(0.765)^3 = 75k(0.447) = $33,525. So $30,000 is incorrect. |
