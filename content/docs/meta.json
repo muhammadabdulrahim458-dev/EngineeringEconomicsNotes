@@ -1,6 +1,8 @@
 {
   "pages": [
     "index",
+    "mcqs",
+    "cheetSheet",
     "---Core Concepts---",
     "chapter1",
     "test",

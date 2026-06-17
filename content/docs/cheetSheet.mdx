@@ -1,0 +1,453 @@
+---
+title: Cheat Sheet
+description: Engineering Economics Formula Revision
+
+---
+
+# 1. Time Value of Money (TVM)
+
+## Remember
+
+**Money today is worth more than money tomorrow.**
+
+Variables:
+
+- PV = Present Value
+- FV = Future Value
+- i = Interest rate
+- n = Number of periods
+- A = Equal periodic payment (annuity)
+
+---
+
+
+
+## Lump Sum Formulas
+
+### Future Value
+
+$$
+FV = PV(1+i)^n
+$$
+
+Use when:
+
+- Given money today
+- Need future amount
+
+---
+
+### Present Value
+
+$$
+PV=\frac{FV}{(1+i)^n}
+$$
+
+Use when:
+
+- Given future amount
+- Need today's value
+
+---
+
+## Annuity Formulas
+
+
+## 1. Ordinary Annuity
+
+An ordinary annuity involves periodic payments made at the **end** of each period (e.g., end of the month or year).
+
+* **Future Value ($F.V$):**
+
+$$F.V = \frac{C}{r} \left[ (1 + r)^n - 1 \right]$$
+
+
+* **Present Value ($P.V$):**
+
+$$P.V = \frac{C}{r} \left[ 1 - \frac{1}{(1 + r)^n} \right]$$
+
+
+
+---
+
+## 2. Annuity Due
+
+An annuity due involves periodic payments made at the **beginning** of each period. Because each payment has more time to earn interest, you multiply the ordinary annuity formulas by $(1 + r)$.
+
+* **Future Value ($F.V$):**
+
+$$F.V = \frac{C}{r} \left[ (1 + r)^n - 1 \right] (1 + r)$$
+
+
+* **Present Value ($P.V$):**
+
+$$P.V = \frac{C}{r} \left[ 1 - \frac{1}{(1 + r)^n} \right] (1 + r)$$
+
+
+---
+
+## TVM Shortcut Memory
+
+- Present → Future = Compounding
+- Future → Present = Discounting
+
+---
+
+# 2. Depreciation
+
+## Straight Line Method
+
+### Annual Depreciation
+
+$$
+D=\frac{Cost-Salvage\ Value}{Useful\ Life}
+$$
+
+### Book Value
+
+$$
+BV=Cost-(Depreciation\times Years)
+$$
+
+---
+
+## Declining Balance Method
+
+### Annual Depreciation
+
+$$
+Depreciation=Book\ Value\times Rate
+$$
+
+Remember:
+
+- Book value decreases every year
+- Depreciation decreases every year
+
+---
+
+# 3. Capital Budgeting Techniques
+
+## Net Present Value (NPV)
+
+### Formula
+
+$$
+NPV=PV\ of\ inflows-Initial\ Investment
+$$
+
+Decision:
+
+- `NPV > 0` → Accept
+- `NPV < 0` → Reject
+- `NPV = 0` → Indifferent
+
+Best method overall.
+
+---
+
+## Internal Rate of Return (IRR)
+
+Definition:
+
+The interest rate at which:
+
+$$
+NPV=0
+$$
+
+Decision:
+
+- `IRR > Required Return` → Accept
+- `IRR < Required Return` → Reject
+
+---
+
+## Profitability Index (PI)
+
+### Formula
+
+$$
+PI=\frac{PV\ of\ inflows}{Initial\ Investment}
+$$
+
+Decision:
+
+- `PI > 1` → Accept
+- `PI < 1` → Reject
+- `PI = 1` → Indifferent
+
+Best for:
+
+- Capital rationing
+- Limited budget
+
+---
+
+## Payback Period
+
+### Formula
+
+$$
+Payback=\frac{Initial\ Investment}{Annual\ Cash\ Inflow}
+$$
+
+Decision:
+
+- Smaller payback period = Better
+
+Weaknesses:
+
+- Ignores TVM
+- Ignores cash flows after payback
+
+---
+
+## Accounting Rate of Return (ARR)
+
+### Formula
+
+$$
+ARR=\frac{Average\ Annual\ Profit}{Average\ Investment}\times100
+$$
+
+Decision:
+
+- Higher ARR = Better
+
+Weakness:
+
+- Ignores TVM
+
+---
+
+# 4. Risk and Return
+
+## Expected Return
+
+$$
+Expected\ Return=\sum(Probability\times Return)
+$$
+
+## Risk
+
+Risk = Uncertainty
+
+Remember:
+
+- Higher risk → Higher potential return
+- Lower risk → Lower potential return
+
+---
+
+## Investor Types
+
+### Risk Averse
+
+- Low risk
+- Stable returns
+
+### Risk Neutral
+
+- Balanced risk and return
+
+### Risk Seeking
+
+- High risk
+- High return
+
+---
+
+## Diversification
+
+Definition:
+
+Investing in multiple assets to reduce risk.
+
+Remember:
+
+Diversification reduces risk but cannot eliminate all risk.
+
+---
+
+# 5. Economic Efficiency
+
+Measures whether benefits exceed costs.
+
+### Formula
+
+$$
+Economic\ Efficiency=\frac{Worth}{Cost}
+$$
+
+Decision:
+
+- Greater than 1 → Efficient
+- Equal to 1 → Break-even
+- Less than 1 → Inefficient
+
+---
+
+# 6. Technical Efficiency
+
+Definition:
+
+Producing maximum output using minimum input.
+
+Remember:
+
+- Less waste
+- Better productivity
+- Maximum output using minimum resources
+
+Usually conceptual (no standard formula).
+
+---
+
+# 7. Cost-Volume-Profit (CVP) Analysis
+
+## Contribution
+
+$$
+Contribution=Sales-Variable\ Cost
+$$
+
+or
+
+$$
+C=S-VC
+$$
+
+---
+
+## P/V Ratio
+
+$$
+P/V\ Ratio=\frac{Contribution}{Sales}\times100
+$$
+
+---
+
+## Break-Even Point (Units)
+
+$$
+BEP=\frac{FC}{SP-VC}
+$$
+
+Where:
+
+- FC = Fixed Cost
+- SP = Selling Price
+- VC = Variable Cost per unit
+
+---
+
+## Break-Even Point (Sales Value)
+
+$$
+BEP=\frac{FC}{P/V\ Ratio}
+$$
+
+---
+
+## Margin of Safety (Value)
+
+$$
+MOS=Actual\ Sales-BEP\ Sales
+$$
+
+---
+
+## Margin of Safety (Profit)
+
+$$
+MOS=\frac{Profit}{P/V\ Ratio}
+$$
+
+---
+
+## Target Sales (Units)
+
+$$
+Target\ Sales=\frac{FC+Target\ Profit}{SP-VC}
+$$
+
+---
+
+# 8. Super Important Exam Decisions
+
+| Technique | Accept When |
+|-----------|-------------|
+| NPV | Positive NPV |
+| IRR | IRR greater than required return |
+| PI | PI greater than 1 |
+| Payback | Shortest period |
+| ARR | Highest ARR |
+| Economic Efficiency | Worth greater than Cost |
+
+---
+
+# 9. One-Minute Memory Table
+
+| Topic | Remember |
+|-------|----------|
+| TVM | Money today is worth more |
+| Compounding | Present → Future |
+| Discounting | Future → Present |
+| NPV | Positive = Accept |
+| IRR | Greater than required return |
+| PI | Greater than 1 |
+| Payback | Smaller is better |
+| ARR | Higher is better |
+| Diversification | Reduces risk |
+| Opportunity Cost | Lost benefit of next best option |
+| Straight Line | (Cost - Salvage) / Life |
+| Economic Efficiency | Worth / Cost |
+| Technical Efficiency | Maximum output, minimum input |
+| Contribution | Sales - Variable Cost |
+| BEP | Total profit = 0 |
+| Margin of Safety | Safety cushion after BEP |
+
+---
+
+# 10. 10 Formulas You Must Memorize
+
+$$
+FV=PV(1+i)^n
+$$
+
+$$
+PV=\frac{FV}{(1+i)^n}
+$$
+
+$$
+FV=A\left(\frac{(1+i)^n-1}{i}\right)
+$$
+
+$$
+PV=A\left(\frac{1-(1+i)^{-n}}{i}\right)
+$$
+
+$$
+D=\frac{Cost-Salvage}{Life}
+$$
+
+$$
+NPV=PV\ inflows-Initial\ Investment
+$$
+
+$$
+PI=\frac{PV\ inflows}{Initial\ Investment}
+$$
+
+$$
+Contribution=S-VC
+$$
+
+$$
+BEP=\frac{FC}{SP-VC}
+$$
+
+$$
+Economic\ Efficiency=\frac{Worth}{Cost}
+$$
