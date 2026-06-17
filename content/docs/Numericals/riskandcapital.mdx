@@ -1,0 +1,539 @@
+---
+title: Risk & Return + Capital Budgeting Numericals
+description: Given by the Teacher
+---
+
+## Question 1: Expected Return (Single Stock)
+
+> A stock has the following possible returns:
+> - Boom: Probability 0.25, Return 25%
+> - Normal: Probability 0.50, Return 15%
+> - Recession: Probability 0.25, Return -10%
+> 
+> **Required:** Calculate the expected return.
+
+---
+
+### Step 1: Identify Data
+
+- Boom: $P_1 = 0.25$, $R_1 = 25\%$
+- Normal: $P_2 = 0.50$, $R_2 = 15\%$
+- Recession: $P_3 = 0.25$, $R_3 = -10\%$
+
+### Step 2: Apply Formula
+
+$$ E(R) = \sum (R_i \times P_i) $$
+
+### Step 3: Substitute and Solve
+
+$$ E(R) = (25\% \times 0.25) + (15\% \times 0.50) + (-10\% \times 0.25) $$
+
+$$ E(R) = 6.25\% + 7.50\% - 2.50\% = 11.25\% $$
+
+> **Final Answer: 11.25%**
+
+---
+
+## Question 2: Expected Return, Variance & Standard Deviation
+
+> | Probability | Return |
+> | :--- | :--- |
+> | 0.20 | 5% |
+> | 0.50 | 10% |
+> | 0.30 | 20% |
+> 
+> **Required:**
+> 1. Calculate expected return.
+> 2. Calculate variance.
+> 3. Calculate standard deviation.
+
+---
+
+### Part 1: Expected Return
+
+$$ E(R) = (0.20 \times 5\%) + (0.50 \times 10\%) + (0.30 \times 20\%) $$
+
+$$ E(R) = 1\% + 5\% + 6\% = 12\% $$
+
+> **Expected Return = 12%**
+
+---
+
+### Part 2: Variance
+
+*Formula:* $\sigma^2 = \sum (R_i - E(R))^2 \times P_i$
+
+| Return ($R_i$) | Deviation $(R_i - 12)$ | Squared | × Probability |
+| :--- | :--- | :--- | :--- |
+| 5% | -7 | 49 | 49 × 0.20 = 9.8 |
+| 10% | -2 | 4 | 4 × 0.50 = 2.0 |
+| 20% | 8 | 64 | 64 × 0.30 = 19.2 |
+
+$$ \sigma^2 = 9.8 + 2.0 + 19.2 = 31.0 $$
+
+> **Variance = 31.0**
+
+---
+
+### Part 3: Standard Deviation
+
+$$ \sigma = \sqrt{31.0} \approx 5.57\% $$
+
+> **Standard Deviation = 5.57%**
+
+---
+
+## Question 3: Coefficient of Variation (CV)
+
+> - Investment A: Expected Return = 12%, Standard Deviation = 8%
+> - Investment B: Expected Return = 18%, Standard Deviation = 15%
+> 
+> **Required:** Calculate coefficient of variation and identify the less risky investment.
+
+---
+
+### Step 1: Formula
+
+$$ CV = \frac{\sigma}{E(R)} $$
+
+### Step 2: Calculate CV for Both
+
+**Investment A:**
+$$ CV_A = \frac{8}{12} = 0.667 $$
+
+**Investment B:**
+$$ CV_B = \frac{15}{18} = 0.833 $$
+
+### Step 3: Compare
+
+- Lower CV means **less risk per unit of return**.
+- $CV_A (0.667) < CV_B (0.833)$
+
+> **Final Answer:** Investment A is less risky (has lower risk per unit of return).
+
+---
+
+## Question 4: Portfolio Expected Return
+
+> - 40% invested in Stock A (10% return)
+> - 60% invested in Stock B (18% return)
+> 
+> **Required:** Calculate expected return.
+
+---
+
+### Step 1: Formula
+
+$$ E(R_p) = W_A \times E(R_A) + W_B \times E(R_B) $$
+
+### Step 2: Substitute
+
+$$ E(R_p) = (0.40 \times 10\%) + (0.60 \times 18\%) $$
+
+$$ E(R_p) = 4\% + 10.8\% = 14.8\% $$
+
+> **Final Answer: 14.8%**
+
+---
+
+## Question 5: Payback Period (Equal Cash Flows)
+
+> - Initial Investment = Rs. 250,000
+> - Annual Cash Inflow = Rs. 50,000
+> 
+> **Required:** Calculate the payback period.
+
+---
+
+### Step 1: Formula
+
+$$ PBP = \frac{\text{Initial Investment}}{\text{Annual Cash Inflow}} $$
+
+### Step 2: Substitute
+
+$$ PBP = \frac{250,000}{50,000} = 5 \text{ years} $$
+
+> **Final Answer: 5 Years**
+
+---
+
+## Question 6: Payback Period (Unequal Cash Flows)
+
+> - Initial Investment = Rs. 180,000
+> - Year 1 = Rs. 40,000
+> - Year 2 = Rs. 50,000
+> - Year 3 = Rs. 60,000
+> - Year 4 = Rs. 70,000
+> 
+> **Required:** Calculate the payback period.
+
+---
+
+### Step 1: Cumulative Cash Flow Table
+
+| Year | Cash Flow | Cumulative CF | Remaining |
+| :--- | :--- | :--- | :--- |
+| 0 | - | -180,000 | - |
+| 1 | 40,000 | -140,000 | Pending |
+| 2 | 50,000 | -90,000 | Pending |
+| 3 | 60,000 | -30,000 | Pending |
+| 4 | 70,000 | +40,000 | Recovered |
+
+### Step 2: Calculate Fraction
+
+- Amount needed at start of Year 4 = **Rs. 30,000**
+- Cash flow in Year 4 = **Rs. 70,000**
+- Fraction = $30,000 / 70,000 = 0.428$
+
+$$ PBP = 3 + 0.428 = 3.43 \text{ years} $$
+
+> **Final Answer: 3.43 Years**
+
+---
+
+## Question 7: Net Present Value (NPV)
+
+> - Initial Investment = Rs. 200,000
+> - Discount Rate = 10%
+> - Year 1 = Rs. 80,000
+> - Year 2 = Rs. 90,000
+> - Year 3 = Rs. 70,000
+> 
+> **Required:** Calculate NPV.
+
+---
+
+### Step 1: Formula
+
+$$ NPV = \sum \frac{CF_t}{(1+r)^t} - I_0 $$
+
+### Step 2: Calculate PV of Each Cash Flow
+
+- $PV_1 = 80,000 / (1.10)^1 = 80,000 / 1.10 = 72,727.27$
+- $PV_2 = 90,000 / (1.10)^2 = 90,000 / 1.21 = 74,380.17$
+- $PV_3 = 70,000 / (1.10)^3 = 70,000 / 1.331 = 52,592.04$
+
+### Step 3: Sum PVs and Subtract Investment
+
+$$ \text{Total PV} = 72,727.27 + 74,380.17 + 52,592.04 = 199,699.48 $$
+
+$$ NPV = 199,699.48 - 200,000 = -300.52 $$
+
+> **Final Answer: Rs. -300.52 (Negative, Reject)**
+
+---
+
+## Question 8: Profitability Index (PI)
+
+> - Initial Investment = Rs. 400,000
+> - Present Value of Cash Inflows = Rs. 500,000
+> 
+> **Required:** Calculate PI.
+
+---
+
+### Step 1: Formula
+
+$$ PI = \frac{\text{PV of Cash Inflows}}{\text{Initial Investment}} $$
+
+### Step 2: Substitute
+
+$$ PI = \frac{500,000}{400,000} = 1.25 $$
+
+> **Final Answer: 1.25 (Accept, since PI > 1)**
+
+---
+
+## Question 9: IRR Using PV Factor Tables
+
+> - Initial Investment = Rs. 160,000
+> - Annual Cash Inflow = Rs. 40,000
+> - Project Life = 5 years
+> 
+> **Required:** Estimate IRR using PV factor tables.
+
+---
+
+### Step 1: Find PVIFA
+
+$$ \text{PVIFA} = \frac{\text{Initial Investment}}{\text{Annual Cash Inflow}} = \frac{160,000}{40,000} = 4.00 $$
+
+### Step 2: Look Up PVIFA Table (n = 5)
+
+| Discount Rate | PVIFA (n=5) |
+| :--- | :--- |
+| 7% | 4.100 |
+| 8% | 3.993 |
+
+Our required PVIFA is **4.00**, which lies between 7% and 8%.
+
+### Step 3: Interpolate
+
+$$ IRR = 7\% + \frac{4.100 - 4.000}{4.100 - 3.993} \times (8\% - 7\%) $$
+
+$$ IRR = 7\% + \frac{0.100}{0.107} \times 1\% = 7\% + 0.93\% = 7.93\% $$
+
+> **Final Answer: ~7.93% (Approximately 8%)**
+
+---
+
+## Question 10: Comprehensive Capital Budgeting
+
+> - Initial Investment = Rs. 500,000
+> - Life = 5 years
+> - Annual Cash Inflow = Rs. 140,000
+> - Salvage Value = Rs. 50,000
+> - Discount Rate = 12%
+> 
+> **Required:**
+> 1. Payback Period
+> 2. ARR (Accounting Rate of Return)
+> 3. NPV
+> 4. Profitability Index
+> 5. Recommendation
+
+---
+
+### Part 1: Payback Period
+
+$$ PBP = \frac{500,000}{140,000} = 3.57 \text{ years} $$
+
+---
+
+### Part 2: ARR (Accounting Rate of Return)
+
+**Step 1:** Calculate Depreciation
+$$ \text{Depreciation} = \frac{\text{Cost} - \text{Salvage}}{\text{Life}} = \frac{500,000 - 50,000}{5} = 90,000 $$
+
+**Step 2:** Annual Net Profit
+$$ \text{Annual Profit} = \text{Cash Inflow} - \text{Depreciation} = 140,000 - 90,000 = 50,000 $$
+
+**Step 3:** Average Investment
+$$ \text{Avg Investment} = \frac{\text{Cost} + \text{Salvage}}{2} = \frac{500,000 + 50,000}{2} = 275,000 $$
+
+**Step 4:** ARR
+$$ ARR = \frac{50,000}{275,000} \times 100 = 18.18\% $$
+
+---
+
+### Part 3: NPV
+
+**Step 1:** PV of Annual Cash Inflows (PVIFA at 12%, n=5 = 3.6048)
+$$ PV_{CF} = 140,000 \times 3.6048 = 504,672 $$
+
+**Step 2:** PV of Salvage Value (PVIF at 12%, n=5 = 0.5674)
+$$ PV_{SV} = 50,000 \times 0.5674 = 28,370 $$
+
+**Step 3:** Total PV and NPV
+$$ \text{Total PV} = 504,672 + 28,370 = 533,042 $$
+$$ NPV = 533,042 - 500,000 = 33,042 $$
+
+---
+
+### Part 4: Profitability Index
+
+$$ PI = \frac{533,042}{500,000} = 1.066 $$
+
+---
+
+### Part 5: Recommendation
+
+| Criteria | Result | Decision |
+| :--- | :--- | :--- |
+| Payback | 3.57 yrs | Acceptable |
+| ARR | 18.18% | Good |
+| NPV | Rs. 33,042 (Positive) | **Accept** |
+| PI | 1.066 (> 1) | **Accept** |
+
+> **Final Recommendation: ACCEPT THE PROJECT** (NPV > 0, PI > 1)
+
+---
+
+## Question 11: NPV Comparison (Mutually Exclusive)
+
+> - Initial investment for each = Rs. 300,000
+> - Discount Rate = 10%
+> 
+> **Project A:**
+> - Year 1 = Rs. 100,000
+> - Year 2 = Rs. 120,000
+> - Year 3 = Rs. 140,000
+> 
+> **Project B:**
+> - Year 1 = Rs. 150,000
+> - Year 2 = Rs. 100,000
+> - Year 3 = Rs. 90,000
+> 
+> **Required:**
+> 1. Calculate NPV of both projects.
+> 2. Select the better project.
+
+---
+
+### Step 1: Project A NPV
+
+$$ PV_A = \frac{100,000}{1.1} + \frac{120,000}{(1.1)^2} + \frac{140,000}{(1.1)^3} $$
+
+$$ PV_A = 90,909.09 + 99,173.55 + 105,184.07 = 295,266.71 $$
+
+$$ NPV_A = 295,266.71 - 300,000 = -4,733.29 $$
+
+---
+
+### Step 2: Project B NPV
+
+$$ PV_B = \frac{150,000}{1.1} + \frac{100,000}{(1.1)^2} + \frac{90,000}{(1.1)^3} $$
+
+$$ PV_B = 136,363.64 + 82,644.63 + 67,618.26 = 286,626.53 $$
+
+$$ NPV_B = 286,626.53 - 300,000 = -13,373.47 $$
+
+---
+
+### Step 3: Comparison and Selection
+
+| Project | NPV | Decision |
+| :--- | :--- | :--- |
+| A | -Rs. 4,733 | Reject |
+| B | -Rs. 13,373 | Reject |
+
+> **Final Answer:** Both projects have negative NPV. **Reject both**. If forced to choose one, select **Project A** (higher NPV, i.e., less negative).
+
+---
+
+## Question 12: Advanced Risk and Capital Budgeting
+
+> - Initial Investment = Rs. 800,000
+> - Life = 5 years
+> - Possible annual cash inflows:
+>   - Probability 0.30 → Rs. 180,000
+>   - Probability 0.50 → Rs. 220,000
+>   - Probability 0.20 → Rs. 300,000
+> 
+> **Required:**
+> 1. Expected annual cash inflow.
+> 2. Expected NPV at 10%.
+> 3. Discuss project risk.
+
+---
+
+### Part 1: Expected Annual Cash Inflow
+
+$$ E(CF) = (0.30 \times 180,000) + (0.50 \times 220,000) + (0.20 \times 300,000) $$
+
+$$ E(CF) = 54,000 + 110,000 + 60,000 = 224,000 $$
+
+> **Expected Annual CF = Rs. 224,000**
+
+---
+
+### Part 2: Expected NPV (Discount Rate = 10%)
+
+PVIFA at 10% for 5 years = 3.7908
+
+$$ PV = 224,000 \times 3.7908 = 849,139.20 $$
+
+$$ NPV = 849,139.20 - 800,000 = 49,139.20 $$
+
+> **Expected NPV = Rs. 49,139 (Positive → Accept)**
+
+---
+
+### Part 3: Discuss Project Risk
+
+- The cash inflows are **uncertain** (range from Rs. 180,000 to Rs. 300,000).
+- The standard deviation of cash flows could be calculated, but qualitatively:
+  - There is a **30% chance** of lower-than-average CF (180k).
+  - There is a **20% chance** of much higher CF (300k).
+- This variability creates **project risk**. The expected NPV is positive, but actual NPV could differ significantly.
+- Management should consider **sensitivity analysis** or **scenario analysis** before finalizing.
+
+> **Final Discussion:** The project has moderate risk due to varying cash flows, but expected NPV is positive. Proceed cautiously.
+
+---
+
+## Question 13: Simple Rate of Return
+
+> Suppose you buy 10 shares of stock for $1000. The stock pays no dividend, but at the end of the year, you sell the stock for $1100. What is the rate of return on your investment?
+
+---
+
+### Step 1: Identify Data
+
+- Beginning Value = $1,000
+- Ending Value = $1,100
+- Income = $0
+
+### Step 2: Apply HPR Formula
+
+$$ HPR = \frac{EV - BV + Income}{BV} = \frac{1100 - 1000 + 0}{1000} = \frac{100}{1000} = 0.10 $$
+
+### Step 3: Convert to Percentage
+
+$$ \text{Return} = 0.10 \times 100 = 10\% $$
+
+> **Final Answer: 10%**
+
+---
+
+## Question 14: Expected Return and Risk
+
+> An investment has:
+> - 30% chance of producing a 25% return
+> - 40% chance of producing a 10% return
+> - 30% chance of producing a -15% return
+> 
+> **Required:** What is expected return? And how much risk does it have?
+
+---
+
+### Part 1: Expected Return
+
+$$ E(R) = (0.30 \times 25\%) + (0.40 \times 10\%) + (0.30 \times -15\%) $$
+
+$$ E(R) = 7.5\% + 4\% - 4.5\% = 7\% $$
+
+> **Expected Return = 7%**
+
+---
+
+### Part 2: Risk (Standard Deviation)
+
+**Step 1:** Deviations from $E(R) = 7\%$
+
+| Return ($R_i$) | Deviation $(R_i - 7)$ | Squared | × Probability |
+| :--- | :--- | :--- | :--- |
+| 25% | 18 | 324 | 324 × 0.30 = 97.2 |
+| 10% | 3 | 9 | 9 × 0.40 = 3.6 |
+| -15% | -22 | 484 | 484 × 0.30 = 145.2 |
+
+**Step 2:** Variance
+$$ \sigma^2 = 97.2 + 3.6 + 145.2 = 246.0 $$
+
+**Step 3:** Standard Deviation
+$$ \sigma = \sqrt{246.0} \approx 15.68\% $$
+
+> **Final Answer:**
+> - Expected Return = **7%**
+> - Risk (Standard Deviation) = **15.68%**
+
+---
+
+## 🏆 Summary of All Answers
+
+| Question | Answer |
+| :--- | :--- |
+| Q1 | 11.25% |
+| Q2 | E(R) = 12%, Variance = 31.0, SD = 5.57% |
+| Q3 | CV_A = 0.667, CV_B = 0.833 → Investment A is less risky |
+| Q4 | 14.8% |
+| Q5 | 5 Years |
+| Q6 | 3.43 Years |
+| Q7 | Rs. -300.52 (Reject) |
+| Q8 | 1.25 (Accept) |
+| Q9 | ~7.93% (≈8%) |
+| Q10 | PBP=3.57 yrs, ARR=18.18%, NPV=Rs.33,042, PI=1.066 → Accept |
+| Q11 | NPV_A = -Rs.4,733, NPV_B = -Rs.13,373 → Reject both (or pick A) |
+| Q12 | E(CF)=Rs.224k, NPV=Rs.49,139 → Moderate risk, Accept |
+| Q13 | 10% |
+| Q14 | E(R)=7%, SD=15.68% |

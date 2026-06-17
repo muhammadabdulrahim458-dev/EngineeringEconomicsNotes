@@ -1,0 +1,373 @@
+---
+title: Risk and Return
+description: Complete Exam Module 
+---
+
+## 1. Concept of Return
+
+- **Return** is the gain or loss on an investment over a specific period of time.
+- It is expressed as a **percentage** of the initial investment.
+- Return consists of:
+  - **Income:** Interest, dividends, or rental income received.
+  - **Capital Gain (or Loss):** The change in the price of the asset.
+
+**Formula – Holding Period Return (HPR):**
+
+$$ HPR = \frac{\text{Ending Value} - \text{Beginning Value} + \text{Income}}{\text{Beginning Value}} $$
+
+$$ \text{Return } \% = HPR \times 100 $$
+
+---
+
+### Solved Numerical 1 (Direct from PDF)
+
+**Question:** An investor buys a share for Rs. 1,000. After one year, the price becomes Rs. 1,150 and a dividend of Rs. 50 is received. Calculate the return.
+
+**Step 1:** Identify data.
+- Beginning Value = 1,000
+- Ending Value = 1,150
+- Income = 50
+
+**Step 2:** Apply formula.
+$$ HPR = \frac{1150 - 1000 + 50}{1000} = \frac{200}{1000} = 0.20 $$
+
+**Step 3:** Convert to percentage.
+$$ \text{Return} = 0.20 \times 100 = 20\% $$
+
+> **Final Answer: 20%**
+
+---
+
+### Solved Numerical 2 (Exam Variation – Finding Missing Price)
+
+**Question:** A stock was purchased for $50. During the year, it paid a $2 dividend. If the total return was 14%, what was the selling price?
+
+**Step 1:** Let ending value = $P$.
+**Step 2:** Formula: $(P - 50 + 2) / 50 = 0.14$
+**Step 3:** $P - 48 = 7 \implies P = 55$
+
+> **Final Answer: $55**
+
+---
+
+## 2. Concept of Risk
+
+- **Risk** is the possibility that the **actual return** will differ from the **expected return**.
+- Risk represents **uncertainty** of returns.
+- **Higher uncertainty = Higher risk.**
+
+---
+
+## 3. Types of Risk (The Core Theory)
+
+*(Your PDF lists 6 types. In university exams, you must also classify them as Systematic or Unsystematic).*
+
+### Systematic Risk (Market Risk – Non-Diversifiable)
+Risk inherent to the **entire market**. Cannot be eliminated by holding a diversified portfolio.
+- **Market Risk:** Fluctuations due to stock market movements.
+- **Inflation Risk:** Loss of purchasing power.
+- **Interest Rate Risk:** Changes in interest rates affecting bond prices and borrowing costs.
+
+### Unsystematic Risk (Firm-Specific – Diversifiable)
+Risk unique to a **specific company or industry**. Can be eliminated through diversification.
+- **Business Risk:** Risk due to business operations (competition, demand changes).
+- **Financial Risk:** Risk due to debt financing (fixed interest payments).
+- **Liquidity Risk:** Risk that an asset cannot be sold quickly without a discount.
+
+| Type of Risk (PDF List) | Category (Exam Classification) |
+| :--- | :--- |
+| Business Risk | Unsystematic (Diversifiable) |
+| Financial Risk | Unsystematic (Diversifiable) |
+| Liquidity Risk | Unsystematic (Diversifiable) |
+| Market Risk | Systematic (Non-Diversifiable) |
+| Inflation Risk | Systematic (Non-Diversifiable) |
+| Interest Rate Risk | Systematic (Non-Diversifiable) |
+
+---
+
+## 4. Expected Return
+
+- Expected return is the **weighted average** of all possible returns, using probabilities as weights.
+
+**Formula:**
+
+$$ E(R) = \sum (R_i \times P_i) $$
+
+---
+
+### Solved Numerical 3 (Direct from PDF)
+
+**Question:** A stock has the following possible returns and probabilities:
+
+| Return (%) | Probability |
+| :--- | :--- |
+| 10% | 0.2 |
+| 15% | 0.5 |
+| 20% | 0.3 |
+
+Find the expected return.
+
+**Step 1:** Multiply each return by its probability.
+- $10\% \times 0.2 = 2.0\%$
+- $15\% \times 0.5 = 7.5\%$
+- $20\% \times 0.3 = 6.0\%$
+
+**Step 2:** Sum them up.
+$$ E(R) = 2.0 + 7.5 + 6.0 = 15.5\% $$
+
+> **Final Answer: 15.5%**
+
+---
+
+### Solved Numerical 4 (Exam Variation – Missing Probability)
+
+**Question:** A stock has 20% chance of 5% return, 50% chance of 10% return, and the rest chance of 15% return. Find E(R).
+
+**Step 1:** Missing probability = $1 - 0.2 - 0.5 = 0.3$
+**Step 2:** $E(R) = 0.2(5) + 0.5(10) + 0.3(15) = 1 + 5 + 4.5 = 10.5\%$
+
+> **Final Answer: 10.5%**
+
+---
+
+## 5. Measurement of Risk (Variance, SD, CV)
+
+### Standard Deviation ($\sigma$)
+Measures the **dispersion** of possible returns around the expected return. **Higher $\sigma$ = Higher risk.**
+
+**Formula:**
+
+$$ \sigma = \sqrt{\sum (R_i - E(R))^2 \times P_i} $$
+
+### Variance ($\sigma^2$)
+The square of standard deviation.
+
+$$ \sigma^2 = \sum (R_i - E(R))^2 \times P_i $$
+
+### Coefficient of Variation (CV)
+Measures **risk per unit of return**. Used to compare investments with different expected returns.
+
+$$ CV = \frac{\sigma}{E(R)} $$
+
+**Rule:** Lower CV is better (less risk for the same return).
+
+---
+
+### Solved Numerical 5 (Direct from PDF – SD & Variance)
+
+**Question:** Using the same data as before ($E(R) = 15.5\%$):
+
+| Return ($R_i$) | Probability ($P_i$) |
+| :--- | :--- |
+| 10% | 0.2 |
+| 15% | 0.5 |
+| 20% | 0.3 |
+
+Calculate the Variance and Standard Deviation.
+
+---
+
+**Step 1:** Find deviations from $E(R) = 15.5\%$:
+- $10 - 15.5 = -5.5$
+- $15 - 15.5 = -0.5$
+- $20 - 15.5 = 4.5$
+
+**Step 2:** Square the deviations:
+- $(-5.5)^2 = 30.25$
+- $(-0.5)^2 = 0.25$
+- $(4.5)^2 = 20.25$
+
+**Step 3:** Multiply by probabilities and sum (Variance):
+$$ \sigma^2 = 30.25(0.2) + 0.25(0.5) + 20.25(0.3) $$
+$$ \sigma^2 = 6.05 + 0.125 + 6.075 = 12.25 $$
+
+**Step 4:** Standard Deviation:
+$$ \sigma = \sqrt{12.25} = 3.5\% $$
+
+> **Final Answer:** Variance = **12.25**, Standard Deviation = **3.5%**
+
+---
+
+### Solved Numerical 6 (Direct from PDF – Coefficient of Variation)
+
+**Question:** Using the above data ($\sigma = 3.5\%$, $E(R) = 15.5\%$), find CV.
+
+$$ CV = \frac{3.5}{15.5} = 0.226 $$
+
+> **Final Answer: 0.226** (This investment has moderate risk per unit of return).
+
+---
+
+### Solved Numerical 7 (Exam-Level – Comparing Two Investments)
+
+**Question:** Stock A has $E(R) = 18\%$, $\sigma = 9\%$. Stock B has $E(R) = 12\%$, $\sigma = 5\%$. Which stock is riskier on a relative basis?
+
+**Step 1:** Calculate CV for both.
+- $CV_A = 9 / 18 = 0.50$
+- $CV_B = 5 / 12 = 0.42$
+
+**Step 2:** Compare. $CV_B$ is lower, so Stock B has **less risk per unit of return**.
+
+> **Final Answer:** Stock B is better on a risk-adjusted basis.
+
+---
+
+## 6. Risk–Return Relationship (The Golden Rule)
+
+- There is a **direct relationship** between risk and return.
+- **Higher risk $\rightarrow$ Higher expected return**
+- **Lower risk $\rightarrow$ Lower expected return**
+- Investors choose investments based on their **risk tolerance**.
+
+---
+
+## 7. Engineering Economics Perspective
+
+- Risk affects **capital budgeting decisions** (which projects to accept).
+- Used in **project evaluation** (NPV, IRR become risky if cash flows are uncertain).
+- Important in **cost–benefit analysis**.
+- Helps engineers select **optimal projects** by balancing risk and return.
+
+---
+
+## 8. Formula Revision Sheet (Your Syllabus)
+
+| Concept | Formula |
+| :--- | :--- |
+| Holding Period Return | $HPR = \frac{EV - BV + Income}{BV}$ |
+| Expected Return | $E(R) = \sum (R_i \times P_i)$ |
+| Variance | $\sigma^2 = \sum (R_i - E(R))^2 \times P_i$ |
+| Standard Deviation | $\sigma = \sqrt{\sigma^2}$ |
+| Coefficient of Variation | $CV = \sigma / E(R)$ |
+
+---
+
+## 9. Statement-Based Training (Quick Fire)
+
+| # | Statement | Answer |
+| :--- | :--- | :--- |
+| 1 | Gain or loss on an investment over time. | Return |
+| 2 | Uncertainty that actual return will differ from expected return. | Risk |
+| 3 | Risk that can be eliminated by diversification. | Unsystematic Risk |
+| 4 | Risk that cannot be eliminated. | Systematic Risk |
+| 5 | Risk due to business operations. | Business Risk |
+| 6 | Risk due to debt financing. | Financial Risk |
+| 7 | Risk due to overall market fluctuations. | Market Risk / Systematic Risk |
+| 8 | Weighted average of possible returns. | Expected Return |
+| 9 | Measures dispersion of returns around expected return. | Standard Deviation |
+| 10 | Risk per unit of return. | Coefficient of Variation |
+| 11 | Direct relationship between risk and return. | Higher risk = Higher expected return |
+| 12 | Risk of loss of purchasing power. | Inflation Risk |
+
+---
+
+## 10. Exam Keyword Decoder
+
+| If the question says... | Think about... |
+| :--- | :--- |
+| "Total gain or loss" | Return / HPR |
+| "Uncertainty" | Risk |
+| "Market risk" / "Non-diversifiable" | Systematic Risk |
+| "Firm-specific" / "Diversifiable" | Unsystematic Risk |
+| "Risk due to borrowing" | Financial Risk |
+| "Weighted average return" | Expected Return |
+| "Spread of returns" | Standard Deviation |
+| "Risk per unit of return" | Coefficient of Variation |
+| "Higher risk, higher return" | Risk-Return Relationship |
+
+---
+
+## 11. MCQs (Self-Check)
+
+1. The return on an investment is 20%. This is measured as:  
+   a) Dollar amount  b) Percentage of initial investment  c) Probability  d) Risk  
+   **Ans: b**
+
+2. Which of the following is a Systematic Risk?  
+   a) Business Risk  b) Financial Risk  c) Inflation Risk  d) Liquidity Risk  
+   **Ans: c**
+
+3. Expected return is calculated as:  
+   a) Sum of returns  b) Weighted average of returns  c) Product of returns  d) Variance  
+   **Ans: b**
+
+4. Standard deviation measures:  
+   a) Average return  b) Dispersion around expected return  c) Risk per unit  d) Inflation  
+   **Ans: b**
+
+5. A higher coefficient of variation means:  
+   a) Lower risk  b) Higher risk per unit of return  c) Higher return  d) No risk  
+   **Ans: b**
+
+6. Which risk can be completely eliminated by diversification?  
+   a) Market Risk  b) Interest Rate Risk  c) Business Risk  d) Inflation Risk  
+   **Ans: c**
+
+---
+
+## 12. Common Mistakes (Exam Traps)
+
+| ❌ Mistake | ✅ Correct Approach |
+| :--- | :--- |
+| Forgetting to add Income (dividend) in HPR. | Always do $EV - BV + Income$. |
+| Using probabilities that don't sum to 1.0. | Check $\sum P_i = 1$. If not, adjust. |
+| Squaring the return instead of the deviation. | Square $(R_i - E(R))$, not $R_i$. |
+| Confusing Variance with Standard Deviation. | SD = $\sqrt{\text{Variance}}$. |
+| Using CV to measure total risk. | CV measures risk *per unit*, not total risk. |
+| Calling Systematic risk "diversifiable". | Systematic = Non-diversifiable. Unsystematic = Diversifiable. |
+
+---
+
+## 13. Memory Tricks (Mnemonics)
+
+- **"BLIM-FI"** for Basic Risk Types:
+  - **B**usiness, **L**iquidity, **I**nflation, **M**arket, **F**inancial, **I**nterest Rate.
+
+- **"SU"** for Risk Categories:
+  - **S**ystematic = **U**n-avoidable (Market/Inflation/Interest).
+  - **U**nsystematic = Avoidable (Business/Financial/Liquidity).
+
+---
+
+## 14. One-Page Revision Sheet (5-Minute Final Look)
+
+```
+RISK & RETURN – CHEAT SHEET
+
+1. RETURN (HPR): (EV - BV + Income) / BV × 100.
+2. RISK: Uncertainty of returns.
+3. SYSTEMATIC RISK: Market, Inflation, Interest (Non-diversifiable).
+4. UNSYSTEMATIC RISK: Business, Financial, Liquidity (Diversifiable).
+5. EXPECTED RETURN: E(R) = Sum (R_i × P_i).
+6. VARIANCE: Sum [ (R_i - E(R))^2 × P_i ].
+7. STANDARD DEVIATION: sqrt(Variance). Higher = Higher risk.
+8. COEFFICIENT OF VARIATION: SD / E(R). Lower = Better.
+9. RELATIONSHIP: Higher risk ➔ Higher expected return.
+
+KEYWORDS:
+- Gain/Loss = Return.
+- Uncertainty = Risk.
+- Market-related = Systematic.
+- Company-related = Unsystematic.
+- Weighted average = Expected Return.
+- Spread = Standard Deviation.
+- Risk per unit = CV.
+```
+
+---
+
+## 15. Practice Questions (Unsolved – Exam Style)
+
+1. An investor buys a bond for Rs. 5,000. After one year, he sells it for Rs. 5,400 and receives Rs. 200 as interest. Calculate the return.
+
+2. A stock has probabilities: 20% chance of 8% return, 50% chance of 12% return, 30% chance of 18% return. Find Expected Return, Variance, and SD.
+
+3. If Asset A has SD = 8% and E(R) = 16%, and Asset B has SD = 5% and E(R) = 10%, which asset has lower risk per unit of return? (Calculate CV for both).
+
+4. List the 6 types of risk and classify them as Systematic or Unsystematic.
+
+5. A stock was bought for $80. During the year, dividends of $4 were received. If the holding period return was 15%, what was the ending price?
+
+6. The expected return of a stock is 12%. The probabilities are 0.3 (Return 6%), 0.4 (Return 10%), and the rest (Return X%). Find the value of X.
+
+---

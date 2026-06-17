@@ -20,10 +20,10 @@ const monoFont = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: "My Docs",
-    template: "%s | My Docs",
+    default: "Engineering Economics Notes",
+    template: "%s | EE",
   },
-  description: "My documentation website",
+  description: "A Comprehensive documentation by Muhammad Abdul Rahim Attari",
 };
 
 // Replaced LayoutProps with a generic layout type for safety, update if you use a specific Fumadocs type wrapper
